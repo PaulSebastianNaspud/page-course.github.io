@@ -1,0 +1,14 @@
+<div class="card-course-item"> 
+    <img src="../../../assets/img/default-img.jpg" alt="" class="img-course">
+    <div class="detail-course">
+        <h3 class="name-course">{{course?.name}}</h3>
+        <p class="description-course">{{course?.description}}</p>
+        <p class="duration_course">{{course?.duration_course}}</p>
+        <button (click)="viewMore = !viewMore" class="btn-load btn-animacion">Mostrar mas</button>
+        @if (viewMore) {
+            <p class="category">{{course?.category}}</p>
+            <p class="startDate-course">{{course?.startDate}}</p>
+            <p class="teaches_name">{{course?.teaches_name}}</p>
+        }
+    </div>
+</div>
