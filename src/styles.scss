@@ -1,166 +1,7 @@
 /* ================================
-    HEADER STYLES
-   ================================ */
-   
-   .header-flex {
-    display: flex;             
-    flex-direction: row;
-    flex-wrap: wrap;          
-    justify-content: space-between; 
-    align-items: center;      
-    padding: 10px 80px;
-}
-
-.item-flex-description {
-    flex: 3;                  
-    flex-shrink: 1;
-}
-
-.item-flex-img {
-    margin: 15px;
-    flex: 2;
-}
-
-/* ================================
-        MAIN CONTAINR 
-   ================================ */
-.main-container {
-    width: 100%;                
-    height: 100%;               
-    display: grid;
-    grid-template-columns: 3fr 1fr;  
-    gap: 20px;                  
-    padding: 20px;              
-    justify-items: center;
-    box-sizing: border-box;     
-}
-
-
-
-/* ================================
-        CONTAINER ADD COURSE
-   ================================ */
-.container-add-course {
-    grid-row: 1 / span 3;            
-    grid-column-start: 2;
-}
-
-
-
-
-/* ================================
-        ALL FLEX LIST
-   ================================ */
-
-.section-list-course {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    padding: 10px 25px;
-}
-
-.main-list-card {
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px; 
-    justify-items: center; 
-    width: 100%; 
-}
-
-.btn-more-less {
-    display: flex;
-    flex-direction: row;
-}
-
-/* ================================ 
-        CARD COURSE ITEM 
-   ================================ */
-
-.card-course-item {
-    display: flex;
-    width: 300px;
-    height: 100%; 
-    min-height: 350px;
-    flex-direction: column;
-    justify-content: space-between; 
-    align-items: center; 
-}
-
-
-
-.img-course{
-    flex: 3;
-    width: 100%; 
-    height: 35px; 
-}
-
-.detail-course {
-    flex: 1;
-}
-
-/* ================================
-        LAST 5 ITEM
-   ================================ */
-.last-item {
-    display: grid;
-    flex-direction: row;
-}
-/* ================================
-        FOOTER 
-   ================================ */
-   
-.footer-container {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-/* ================================
-        MEDIA QUERIES
-   ================================ */
-@media (max-width: 768px) {
-    .header-flex {
-        flex-direction: column; 
-        align-items: flex-start; 
-    }
-
-    /* 
-        Hacer que los elementos ocupen el ancho completo 
-    */
-    .item-flex {
-        width: 100%;             
-        margin: 10px 0;         
-    }
-
-    .p-header-description {
-        text-align: center;     
-    }
-
-    nav ul li {
-        display: block;         
-        margin: 10px 0;        
-    }
-}
-
-@media (max-width: 768px) {
-    .main-container {
-        grid-template-columns: 1fr;   
-        gap: 10px; 
-    }
-    
-    .container-add-course {
-        grid-row: auto;
-        grid-column-start: auto;            
-    }
-}
-
-/* ================================
         RESET / NORMALIZATION
    ================================ */
-   * {
+* {
     padding: 0;
     margin: 0;                 
     box-sizing: border-box;    
@@ -175,155 +16,60 @@ body {
     background-color: #f4f4f9; 
 }
 
-/* ================================
-    HEADER STYLES
-   ================================ */
-
-h1 {
-    color: white;              
-    text-align: center;
-    padding-top: 35px;        
-}
-
-.header-page {
-    animation: fadeInUp 1s ease forwards;
-    color: white;              
-    position: relative;
-    background: radial-gradient(circle, #00509d, #003f88,  #00296b); 
-}
-
-.p-header-description {
-    font-size: 20px;    
-}
-
-.img-header {
-    max-width: 100%;          
-    height: auto;             
-}
-
-/* ================================
-        PAGE HEADER STYLES
-   ================================ */
-.name-page-header {
-    color: #fdc500;              
-    font-weight: bold;        
-}
-
-.p-header-description {
-    text-align: justify;    
-    padding-top: 25px;       
-}
-
-/* ================================
-        Main-Container
-   ================================ */
-.main-container {
-    animation: fadeInUp 1s ease forwards;
-}
-/* ================================
-        CARD COURSE
-   ================================ */
-
-
-.main-list-card {
-    background-color: #ddd;
-    border-radius: 10px;
-    padding: 15px 0;
-    margin: 10px;
-}
-
-.section-title {
-    font-size: 24px; 
-    color: #333; 
-    margin-bottom: 10px; 
-    text-align: center; 
-}
-
-.section-description {
-    font-size: 16px; /* Tamaño de fuente para la descripción */
-    color: #666; /* Color del texto para la descripción */
-    margin-bottom: 20px; /* Espaciado debajo de la descripción */
-    text-align: center; /* Centrar la descripción */
-}
-
-.highlight {
-    color: #00296b; /* Color dorado para el texto resaltado */
-    font-weight: bold; /* Negrita para el texto resaltado */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra de texto para un efecto de profundidad */
-}
-
-.card-course-item {
-    border-radius: 8px;
-    padding: 16px;
-    margin: 10px;
-    background-color: #f9f9f9;
-    position: relative; /* Asegura que el botón se mantenga dentro de la tarjeta */
-}
-
-.card-course-item:hover {
-    transform: translateY(-10px); /* Eleva la tarjeta al pasar el cursor */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Incrementa la sombra al hacer hover */
-}
-
-.img-course {
-    border-radius: 8px; /* Redondea la imagen según el contenedor */
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
-    margin-bottom: 10px; /* Espacio inferior entre la imagen y el resto del contenido */
-}
 
 /* ================================
         Buton
    ================================ */
 
 .detail-button {
-    margin: 10px 0; /* Espacio alrededor del botón */
-    padding: 8px 16px; /* Relleno del botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    /* Agrega más estilos según sea necesario */
+    margin: 10px 0; 
+    padding: 8px 16px; 
+    cursor: pointer; 
 }
+
 
 /* Clase compartida para animaciones en botones y enlaces */
 .btn-animacion {
-    transition: transform 0.2s ease, box-shadow 0.3s ease; /* Transiciones suaves para transformaciones y sombras */
+    transition: transform 0.2s ease, box-shadow 0.3s ease; 
 }
 
 /* Estilos para los botones */
 /* Animación de pulsación */
 @keyframes pulse {
     0% {
-        transform: translateY(-3px) scale(1.05); /* Posición inicial */
+        transform: translateY(-3px) scale(1.05); 
     }
     50% {
-        transform: translateY(-5px) scale(1.1); /* Escala y desplaza hacia arriba un poco más */
+        transform: translateY(-5px) scale(1.1); 
     }
     100% {
-        transform: translateY(-3px) scale(1.05); /* Vuelve a la posición inicial */
+        transform: translateY(-3px) scale(1.05); 
     }
 }
 
 /* Clase compartida para animaciones en botones y enlaces */
 .btn-animacion {
-    transition: transform 0.2s ease, box-shadow 0.3s ease; /* Transiciones suaves para transformaciones y sombras */
+    transition: transform 0.2s ease, box-shadow 0.3s ease; 
 }
 
 /* Estilos para los botones */
 .btn-load {
-    background-color: #00296b; /* Color de fondo */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 20px; /* Espaciado interno (arriba-abajo, izquierda-derecha) */
-    font-size: 16px; /* Tamaño de fuente */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    max-width: 500px; /* Ancho máximo del botón */
-    margin: 10px auto; /* Centrar horizontalmente y añadir espacio arriba y abajo */
-    position: relative; /* Necesario para el efecto de sombra */
+    background-color: #00296b; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer;  
+    max-width: 500px;  
+    margin: 10px auto; 
+    position: relative; 
 }
 
 /* Estilo al pasar el ratón en el botón */
 .btn-animacion:hover {
-    animation: pulse 0.6s ease-in-out infinite; /* Añadir efecto de pulsación al pasar el ratón */
-    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5); /* Añade sombra para dar un efecto de elevación */
+    animation: pulse 0.6s ease-in-out infinite; 
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5); 
 }
 
 /* Efecto de clic en el botón */
@@ -333,215 +79,47 @@ h1 {
 }
 
 
-/* ================================
-        NAVIGATION STYLES
-   ================================ */
-
-nav {
-    margin: 15px 0;
-    text-align: center;     /*Centrar los items*/
-}
-
-nav ul {
-    list-style-type: none;    /* Eliminar viñetas de la lista */
-    padding-top: 25px;        /* Espaciado superior para la lista de navegación */
-}
-
-nav ul li {
-    display: inline;           /* Mostrar elementos de la lista en línea */
-    margin: 0 15px;           /* Espaciado horizontal entre elementos de la lista */
-}
-
-/* Estilos para enlaces en el menú de navegación */
-nav ul li a {
-    color: #fff; /* Color del texto */
-    text-decoration: none; /* Sin subrayado */
-    padding: 8px 2px; /* Espaciado en los botones */
-    border-radius: 5px; /* Bordes redondeados en botones */
-    position: relative; /* Necesario para el efecto de sombra */
-}
-
-/* Estilo al pasar el ratón en los enlaces del menú */
-nav ul li a:hover {
-    animation: pulse 0.6s ease-in-out infinite; /* Añadir efecto de pulsación al pasar el ratón */
-    font-weight: bold; /* Negrita al pasar el ratón */
-    color: #000; /* Cambiar el color a negro */
-    background-color: #fdc500; /* Color dorado al pasar el ratón */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Añadir sombra para dar efecto de elevación */
-}
-
-
-/* ================================
-    FORM-ADD-COURSE
-   ================================ */
-
-   .course-registration {
-    background-color: #f9f9f9; /* Fondo suave */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    padding: 20px; /* Espaciado interno */
-    max-width: 600px; /* Limitar ancho del formulario */
-    margin: 0 auto; /* Centrar en la página */
-}
-
-.course-registration h2 {
-    text-align: center; /* Centrar el título */
-    font-size: 24px; /* Tamaño de fuente más grande */
-    margin-bottom: 20px; /* Espaciado debajo del título */
-    color: #333; /* Color de texto */
-}
-
-.form-group {
-    margin-bottom: 15px; /* Espaciado entre campos */
-}
-
-.form-group label {
-    display: block; /* Colocar el label en una línea independiente */
-    font-size: 14px; /* Tamaño de fuente adecuado para etiquetas */
-    font-weight: bold; /* Destacar etiquetas */
-    margin-bottom: 5px; /* Espaciado entre el label y el input */
-    color: #555; /* Color gris para texto */
-}
-
-.form-group input, 
-.form-group textarea, 
-.form-group select {
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    padding: 10px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño de texto */
-    border: 1px solid #ccc; /* Borde de campo */
-    border-radius: 5px; /* Bordes redondeados */
-    box-sizing: border-box; /* Incluir padding y borde en el tamaño total */
-    transition: border-color 0.3s ease; /* Transición suave */
-}
-
-.form-group input:focus, 
-.form-group textarea:focus, 
-.form-group select:focus {
-    border-color: #007bff; /* Cambia el color del borde al hacer focus */
-    outline: none; /* Elimina el outline del navegador */
-}
-
-textarea {
-    resize: vertical; /* Permitir que el textarea cambie su tamaño verticalmente */
-    min-height: 100px; /* Altura mínima del textarea */
-}
-
-select {
-    background-color: #fff; /* Fondo blanco */
-    -webkit-appearance: none; /* Elimina la apariencia predeterminada del select */
-    -moz-appearance: none;
-    appearance: none;
-}
-
-.form-group select {
-    cursor: pointer; /* Cambia el cursor al pasar sobre el select */
-}
-
-/* ================================
-        FOOTER STYLES
-   ================================ */
-
-.footer {
-    background-color: #00296b; 
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-
-.footer-links {
-    margin-bottom: 15px;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 14px;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-.footer-social a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 16px;
-}
-
-.footer-social a:hover {
-    text-decoration: underline;
-}
-
-.footer-copy p {
-    margin-top: 20px;
-    font-size: 12px;
-}
-
-/* ================================
-        ABOUT COURSE
-   ================================ */
-.about-courses {
-    text-align: left;
-    margin: 60px auto;
-    padding: 0 20px;
-    max-width: 900px;
-    animation: fadeInUp 1s ease forwards;
-
-}
-
-.about-courses h2 {
-    font-size: 2.2rem;
-    color: #343a40;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease forwards; 
-}
-
-.about-courses p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #555;
-    margin-bottom: 40px;
-    text-align: justify;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease forwards; /* Aplicación de la animación */
-    animation-delay: 0.2s; /* Retraso en la animación */
-}
-
-.about-courses img.about-image {
-    width: 100%; /* Ajusta el ancho al contenedor */
-    height: auto; /* Mantiene la relación de aspecto */
-    margin: 30px 0; /* Espaciado superior e inferior */
-    border-radius: 12px; /* Bordes redondeados */
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Sombra */
-    transform: translateY(20px); /* Desplazamiento inicial */
-    animation: fadeIn 0.6s forwards; /* Animación de aparición */
-    animation-delay: 0.4s; /* Retraso en la animación */
-}
-
-.about-courses img.about-image:hover {
-    transform: scale(1.05); /* Zoom al pasar el ratón */
-    transition: transform 0.3s ease; /* Animación suave */
-}
-
 /* Definición de la animación fadeInUp */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
-        transform: translateY(20px); /* Comienza desplazado hacia abajo */
+        transform: translateY(20px); 
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* Termina en su posición normal */
+        transform: translateY(0); 
     }
 }
 
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr;   
+        gap: 10px; 
+    }
+    
+    .container-add-course {
+        grid-row: auto;
+        grid-column-start: auto;            
+    }
+    
+    .header-flex {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .item-flex {
+        width: 100%;             
+              
+    }
+
+    .p-header-description {
+        text-align: center;     
+    }
+
+    nav ul li {
+        display: block;   
+        margin: 10px 0;   
+          
+    }
+}
 

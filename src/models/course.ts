@@ -1,11 +1,11 @@
 export class Course {
-    name 
-    category
-    duration_course
-    teaches_name
-    startDate
-    description
-    imgSrc
+    name : string
+    category : string 
+    duration_course : number
+    teaches_name : string
+    startDate : Date
+    description : string
+    imgSrc : string
 
     constructor(name : string, category: string, duration_course : number, teaches_name : string, startDate: Date, { description = "", imgSrc = "../../../assets/img/default-img.jpg" } = {}) {
         this.name = name;                  

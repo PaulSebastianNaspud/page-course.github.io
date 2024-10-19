@@ -1,0 +1,84 @@
+/* ================================
+    HEADER STYLES
+   ================================ */
+
+header {
+    display: grid;
+    justify-content: center;
+    color: white;              
+    position: relative;
+    background: radial-gradient(circle, #00509d, #003f88,  #00296b); 
+    animation: fadeInUp 1s ease forwards;
+}   
+
+.header-flex {
+    display: flex;             
+    flex-direction: row;
+    flex-wrap: wrap;          
+    justify-content: space-between; 
+    align-items: center;      
+    padding: 10px 80px;
+    max-width: 1250px;
+}
+
+.item-flex-description {
+    flex: 3;                  
+    flex-shrink: 1;
+}
+
+.item-flex-img {
+    margin: 15px;
+    flex: 2;
+}
+
+nav ul li {       
+    margin: 0 10px;        
+}
+
+
+.name-page-header {
+    color: #fdc500;              
+    font-weight: bold;        
+}
+
+.p-header-description {
+    text-align: justify;    
+    padding-top: 25px;  
+    font-size: 20px;      
+}
+
+h1 {
+    color: white;              
+    text-align: center;
+    padding-top: 35px;        
+}
+
+.img-header {
+    max-width: 100%;          
+    height: auto;             
+}
+
+
+@media (max-width: 768px) {
+    
+    .header-flex {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .item-flex {
+        width: 100%;             
+              
+    }
+
+    .p-header-description {
+        text-align: center;     
+    }
+
+    nav ul li {
+        display: block;   
+        margin: 10px 0;   
+          
+    }
+}
+
