@@ -35,3 +35,20 @@
 .detail-course {
     flex: 1;
 }
+
+.course-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.course-field label {
+    width: 100px; /* Ancho fijo para alinear */
+    font-weight: bold;
+    margin-right: 10px; 
+}
+
+.course-field span {
+    flex: 1;
+}
+

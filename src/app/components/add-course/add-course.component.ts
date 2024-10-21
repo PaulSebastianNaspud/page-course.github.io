@@ -18,9 +18,33 @@ export class AddCourseComponent {
   duration : number = -1
   dateStart : Date = new Date()
   
-  @Output() addCourseEvent = new EventEmitter()
+  @Output() sendData = new EventEmitter<Course>()
 
-  sendDataAddCourse(){
-    this.addCourseEvent.emit(new Course(this.name, this.category, this.duration,this.teachesname, this.dateStart))
+  addCourse(){
+    const today = new Date(); 
+    
+    if (this.dateStart < today || this.duration <= 0) {
+      if (this.dateStart < today) {
+          alert("La fecha de inicio no puede ser anterior a hoy.");
+      }
+      if (this.duration <= 0) {
+          alert("La duración debe ser mayor a 0.");
+      }
+      return; 
+  }
+    const course : Course = new Course(this.name, this.category, this.duration,this.teachesname, this.dateStart, this.description, this.imgSrc)
+    alert("Nuevo curos registrado")
+    this.clearCamps()
+    this.sendData.emit(course)
+  }
+
+  clearCamps(){
+    this.name = ""
+    this.category = ""
+    this.description = ""
+    this.imgSrc = ""
+    this.teachesname = ""
+    this.duration = -1
+    this.dateStart = new Date()
   }
 }

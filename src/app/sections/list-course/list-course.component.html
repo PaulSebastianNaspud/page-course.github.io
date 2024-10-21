@@ -1,4 +1,4 @@
-<section class="section-list-course"> 
+<section class="section-list-course" id="list-course"> 
     <h2 class="section-title">
         <span class="highlight">Todos los cursos de</span> Academia Virtual
     </h2>
@@ -7,12 +7,8 @@
         Ya sea que busques mejorar tus habilidades o aprender algo nuevo, tenemos el curso adecuado para ti.
     </p>
     <div id="grip-all-card" class="main-list-card">
-        @for (course of listCourseCanche; track $index) {
+        @for (course of listCourse; track $index) {
             <app-card-course [course]="course"></app-card-course>
         }
-    </div>
-    <div class="btn-more-less">
-        <button id="load-more" class="btn-load btn-animacion">Mostrar más</button>
-        <button id="load-less" class="btn-load btn-animacion">Mostrar menos</button>
     </div>
 </section>

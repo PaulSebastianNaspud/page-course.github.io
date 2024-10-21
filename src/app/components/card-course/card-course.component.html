@@ -1,14 +1,32 @@
-<div class="card-course-item"> 
-    <img src="../../../assets/img/default-img.jpg" alt="" class="img-course">
+<div class="card-course-item">  
+    <img src="{{course?.imagen}}" alt="" class="img-course">
     <div class="detail-course">
-        <h3 class="name-course">{{course?.name}}</h3>
-        <p class="description-course">{{course?.description}}</p>
-        <p class="duration_course">{{course?.duration_course}}</p>
-        <button (click)="viewMore = !viewMore" class="btn-load btn-animacion">Mostrar mas</button>
-        @if (viewMore) {
-            <p class="category">{{course?.category}}</p>
-            <p class="startDate-course">{{course?.startDate}}</p>
-            <p class="teaches_name">{{course?.teaches_name}}</p>
+        <div class="course-field">
+            <label for="name">Nombre:</label>
+            <span class="name-course">{{course?.name}}</span>
+        </div>
+        <div class="course-field">
+            <label for="description">Descripción:</label>
+            <span class="description-course">{{course?.descripcion}}</span>
+        </div>
+        <div class="course-field">
+            <label for="duration">Duración:</label>
+            <span class="duration_course">{{course?.duration}}</span>
+        </div>
+        <button (click)="viewMore = !viewMore" class="btn-load btn-animacion">Mostrar más</button>
+        @if (viewMore){
+            <div class="course-field">
+                <label for="category">Categoría:</label>
+                <span class="category">{{course?.category}}</span>
+            </div>
+            <div class="course-field">
+                <label for="dateStart">Fecha de Inicio:</label>
+                <span class="startDate-course">{{formatDate()}}</span>
+            </div>
+            <div class="course-field">
+                <label for="teachesName">Profesor:</label>
+                <span class="teaches_name">{{course?.teachesName}}</span>
+            </div>
         }
     </div>
 </div>

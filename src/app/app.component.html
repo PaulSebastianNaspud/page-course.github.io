@@ -1,2 +1,15 @@
-<app-home-screen></app-home-screen>
-<router-outlet />
+<div id="app-home-screen" class="main-screen">
+    <app-navigator-bar></app-navigator-bar>
+    <app-header></app-header>
+    <div class="main-container">
+        <div class="left-container">
+            <div class="new-course">
+                <app-new-course></app-new-course>
+                <app-add-course (sendData)="addCourse($event)"></app-add-course>
+            </div>
+            <app-list-course #list_course ></app-list-course>
+        </div>
+        <app-abount-us></app-abount-us>
+    </div> 
+    <app-footer></app-footer>   
+</div>

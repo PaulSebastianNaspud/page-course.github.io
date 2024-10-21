@@ -1,0 +1,8 @@
+<nav>
+    <ul>
+        <li *ngFor="let item of navItems; let index = index" class="nav-item" 
+            [class.selected]="selectedNav === item">
+            <a [href]="navItemsID[index]" (click)="selectNav(item)">{{ item }}</a>
+        </li>
+    </ul>
+</nav>

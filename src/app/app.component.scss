@@ -1,0 +1,99 @@
+/* CSS para el diseño de la cuadrícula */
+#app-home-screen {
+    display: grid;
+    grid-template-areas: 
+        "bar header"
+        "bar main"
+        "footer footer";
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    height: auto;
+}
+
+/* Estilos para cada sección */
+app-navigator-bar {
+    grid-area: bar;
+    position: fixed;
+    height: 100%;
+}
+
+app-header {
+    grid-area: header;
+    
+}
+
+/* ================================
+        MAIN CONTAINR STYLES
+   ================================ */
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    animation: fadeInUp 1s ease forwards;   
+    grid-area: main;
+    padding: 20px;
+    overflow-y: hidden;
+
+}
+
+app-abount-us {
+    flex: 1;
+}
+
+.left-container {
+    flex: 5;
+}
+
+app-footer { 
+    grid-area: footer;
+    z-index: 1;
+}
+
+.new-course {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+ 
+app-new-course {
+    flex: 3;
+}
+app-add-course {
+    flex: 2;
+}
+
+/* Media query para pantallas de 768px o menos */
+@media (max-width: 768px) {
+    #app-home-screen {
+        grid-template-areas: 
+            "header"
+            "bar"
+            "main"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        height: auto; 
+    }
+
+    .main-container {
+        flex-direction: column;  
+    }
+
+    app-navigator-bar {
+        position: static;
+        height: auto;
+        width: auto;
+        margin-left: 0;
+    }
+
+    app-header,
+    app-main-container,
+    app-footer {
+        margin-left: 0;
+    }
+    .new-course {
+        flex-direction: column;
+    }
+}
